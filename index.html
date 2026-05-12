@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALTHINSIGHT | 壓力與發炎的隱形連鎖</title>
+    <meta name="description" content="深入探討職場壓力如何引發身體慢性發炎與肥胖的生理機制，提供專業數據分析與健康對策。">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">HEALTH<span>INSIGHT</span></div>
+            <div class="nav-links">
+                <a href="#overview">現狀解析</a>
+                <a href="#evidence">核心數據</a>
+                <a href="#mechanism">生理機制</a>
+                <a href="#assessment">個人評估</a>
+                <a href="#solutions">應對策略</a>
+            </div>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content reveal">
+                <span class="badge">2024 職場健康研究報告</span>
+                <h1>隱形危機：<br><span>身體發炎</span>與<span>肥胖</span>的連鎖效應</h1>
+                <p>長期處於高壓工作環境，不僅是心理負擔，更是引發慢性發炎與內臟脂肪囤積的元兇。我們將透過數據揭開這場無聲的健康風暴。</p>
+                <div class="hero-actions">
+                    <a href="#evidence" class="btn btn-primary">查看核心數據</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Overview -->
+        <section id="overview">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>現狀解析</h2>
+                    <p>超過 67% 的上班族正承受中度以上的職場壓力。這不只是個人問題，而是現代社會的普遍現象。</p>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="reveal">
+                        <ul class="stats-list">
+                            <li class="stat-item">
+                                <span class="stat-icon">🔴</span>
+                                <div class="stat-info">
+                                    <h4>重度壓力 (22%)</h4>
+                                    <p>長期失眠、焦慮，嚴重影響日常生活品質。</p>
+                                </div>
+                            </li>
+                            <li class="stat-item">
+                                <span class="stat-icon">🟠</span>
+                                <div class="stat-info">
+                                    <h4>中高壓力 (45%)</h4>
+                                    <p>常感疲憊，依賴咖啡因或甜食維持能量。</p>
+                                </div>
+                            </li>
+                            <li class="stat-item">
+                                <span class="stat-icon">🟡</span>
+                                <div class="stat-info">
+                                    <h4>輕度壓力 (25%)</h4>
+                                    <p>偶爾感到緊繃，但尚能自我調節平衡。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chart-card glass reveal">
+                        <canvas id="distributionChart"></canvas>
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                            <h3 style="font-size: 2rem;">67%</h3>
+                            <p style="font-size: 0.8rem; color: var(--text-secondary);">受壓群體</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Core Evidence -->
+        <section id="evidence">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>核心數據</h2>
+                    <p>數據顯示，發炎指數 (CRP) 與肥胖指標 (BMI) 隨著壓力等級的上升呈現顯著的指數型增長。</p>
+                </div>
+
+                <div class="glass reveal" style="padding: 3rem; border-radius: 32px;">
+                    <div class="controls">
+                        <button onclick="updateChart('all')" class="control-btn active">顯示全貌</button>
+                        <button onclick="updateChart('low')" class="control-btn">低壓組特徵</button>
+                        <button onclick="updateChart('high')" class="control-btn">高壓組特徵</button>
+                    </div>
+                    <div class="chart-card" style="height: 450px;">
+                        <canvas id="correlationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Mechanism -->
+        <section id="mechanism">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>生理機制</h2>
+                    <p>為什麼壓力會讓人又腫又胖？這是一個由荷爾蒙主導的惡性循環。</p>
+                </div>
+
+                <div class="mechanism-grid">
+                    <div class="mech-card glass reveal">
+                        <span class="mech-icon">🧠</span>
+                        <h3>1. 壓力荷爾蒙</h3>
+                        <p>大腦偵測到壓力，促使腎上腺分泌「皮質醇」。長期高水平的皮質醇會破壞代謝平衡。</p>
+                    </div>
+                    <div class="mech-card glass reveal" style="transition-delay: 0.2s;">
+                        <span class="mech-icon">🍔</span>
+                        <h3>2. 脂肪囤積</h3>
+                        <p>皮質醇增加食慾，並引導熱量優先轉化為「內臟脂肪」，特別是腹部區域。</p>
+                    </div>
+                    <div class="mech-card glass reveal" style="transition-delay: 0.4s;">
+                        <span class="mech-icon">🔥</span>
+                        <h3>3. 慢性發炎</h3>
+                        <p>過多的內臟脂肪會釋放發炎物質，使身體陷入慢性發炎，進一步加劇肥胖。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Assessment -->
+        <section id="assessment">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>個人風險評估</h2>
+                    <p>輸入您的數據，快速了解您目前的慢性發炎與代謝風險狀況。</p>
+                </div>
+
+                <div class="assessment-container reveal">
+                    <div class="assessment-form">
+                        <div class="form-group">
+                            <label>生理性別</label>
+                            <select id="input-gender">
+                                <option value="male">男性</option>
+                                <option value="female">女性</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>近期工作壓力 (1-10): <span id="stress-val" class="text-red">5</span></label>
+                            <input type="range" id="input-stress" min="1" max="10" value="5">
+                        </div>
+                        <div class="form-group">
+                            <label>平均每日睡眠 (小時)</label>
+                            <input type="number" id="input-sleep" value="7" step="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label>腰圍 (cm)</label>
+                            <input type="number" id="input-waist" value="85">
+                        </div>
+                        <button onclick="calculateRisk()" class="btn btn-primary" style="width: 100%;">開始分析</button>
+                    </div>
+
+                    <div class="assessment-result glass">
+                        <div id="result-placeholder" class="result-placeholder">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">📊</div>
+                            <p>完成左側表單以獲取您的專屬報告</p>
+                        </div>
+                        <div id="result-content" class="result-content">
+                            <h3 style="margin-bottom: 2rem;">評估結果</h3>
+                            <div class="risk-grid">
+                                <div class="risk-box">
+                                    <p class="risk-label">發炎風險</p>
+                                    <p class="risk-value" id="infl-level">--</p>
+                                </div>
+                                <div class="risk-box">
+                                    <p class="risk-label">內臟脂肪</p>
+                                    <p class="risk-value" id="fat-level">--</p>
+                                </div>
+                            </div>
+                            <div class="advice-box">
+                                <h4>💡 專業建議</h4>
+                                <p id="advice-text" style="font-size: 0.95rem; color: var(--text-secondary);">--</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Solutions -->
+        <section id="solutions">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>應對策略</h2>
+                    <p>透過多維度的生活調整，主動阻斷壓力與發炎的惡性循環。</p>
+                </div>
+
+                <div class="tabs-container reveal">
+                    <div class="tabs-nav">
+                        <button onclick="switchTab('diet')" class="tab-btn active">抗炎飲食</button>
+                        <button onclick="switchTab('move')" class="tab-btn">微型活動</button>
+                        <button onclick="switchTab('mind')" class="tab-btn">心智重啟</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="tab-diet" class="tab-panel active">
+                            <div class="solution-card glass" style="padding: 4rem; border-radius: 32px;">
+                                <div style="font-size: 8rem; text-align: center;">🥗</div>
+                                <div>
+                                    <h3>地中海式抗炎飲食</h3>
+                                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">減少糖分攝取，增加抗氧化食物比例。</p>
+                                    <ul class="solution-list">
+                                        <li>富含 Omega-3：鮭魚、鯖魚、核桃</li>
+                                        <li>彩虹蔬菜：深綠色葉菜、藍莓、番茄</li>
+                                        <li>全穀物替代：燕麥、糙米、藜麥</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-move" class="tab-panel">
+                            <div class="solution-card glass" style="padding: 4rem; border-radius: 32px;">
+                                <div style="font-size: 8rem; text-align: center;">🚶‍♂️</div>
+                                <div>
+                                    <h3>打斷久坐的微活動</h3>
+                                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">頻繁地打破靜態姿勢，促進血液循環。</p>
+                                    <ul class="solution-list">
+                                        <li>番茄鐘活動法：每 50 分鐘起身走動</li>
+                                        <li>飯後散步：穩定餐後血糖波動</li>
+                                        <li>站立會議：增加日常基礎代謝量</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-mind" class="tab-panel">
+                            <div class="solution-card glass" style="padding: 4rem; border-radius: 32px;">
+                                <div style="font-size: 8rem; text-align: center;">🧘‍♀️</div>
+                                <div>
+                                    <h3>神經系統降溫</h3>
+                                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">啟動副交感神經，從源頭阻斷壓力荷爾蒙。</p>
+                                    <ul class="solution-list">
+                                        <li>4-7-8 呼吸法：快速緩解焦慮緊繃</li>
+                                        <li>數位排毒：睡前 1 小時遠離藍光刺激</li>
+                                        <li>心理邊界：區分工作職責與自我價值</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">HEALTH<span>INSIGHT</span></div>
+            <p>© 2026 職場健康數據倡議團隊. Simulated Data for Educational Purposes.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
